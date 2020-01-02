@@ -7,16 +7,25 @@ public class FindMaxArray {
                 {15, 16, 17, 18}
         };
 
-        int Max = 0;
-
+        int Max = 0, Min = 0;
+// Find Max;
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
-                if (matrix[row][col] > Max) {
+                if (matrix[row][col] >= Max) {
                     Max = matrix[row][col];
 
                 }
             }
         }
-        System.out.println("Max is: "+Max);
+// Find Min
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[row].length; col++) {
+                if (matrix[row][col] <= Min) {
+                    Min = matrix[row][col];
+                }
+            }
+        }
+        System.out.println("Max is: " + Max);
+        System.out.println("Min is: " + Min);
     }
 }
